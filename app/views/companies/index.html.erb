@@ -1,0 +1,24 @@
+<h1> Pagina Index Empresas </h1>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre empresa </th>
+      <th>Rubro </th>
+      <th>Rut </th>
+      <th>Dirección </th>
+      	
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @companies.each do |company| %>
+      <tr>
+        <td><%= link_to company.name, company %></td>
+        <td><%= company.category %></td>
+        <td><%= company.rut %></td>
+        <td><%= company.address %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,23 @@
+
+<%= form_for(@company) do |f| %>
+	<% @company.errors.full_messages.each do |message| %>
+		<div><%= message %></div>
+	<%end%>
+	<div>
+		<%= f.text_field :name, placeholder: "Name of company" %>
+	</div>
+	<div>
+		<%= f.text_field :category, placeholder: "Enter category" %>
+	</div>
+	<div>
+		<%= f.text_field :rut, placeholder: "Rut of company" %>
+	</div>
+	<div>
+		<%= f.text_field :address, placeholder: "Address of company" %>
+	</div>
+	<br>
+	<div>
+		<%= f.submit "Save" %>
+	</div>
+	
+<%end%>
